@@ -1,0 +1,966 @@
+:root {
+    --cosmetic-primary: #087f8c;
+    --cosmetic-primary-dark: #066773;
+    --cosmetic-heading: #163047;
+    --cosmetic-text: #657586;
+    --cosmetic-light: #f2f8fa;
+    --cosmetic-white: #ffffff;
+    --cosmetic-border: #e1ebef;
+    --cosmetic-shadow: 0 15px 40px rgba(22, 48, 71, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--cosmetic-text);
+    background: var(--cosmetic-white);
+    line-height: 1.7;
+}
+
+.cosmetic-container {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 95px 0;
+}
+
+.cosmetic-hero h1,
+.cosmetic-intro h2,
+.cosmetic-section-heading h2,
+.cosmetic-benefits h2,
+.cosmetic-aftercare h2,
+.cosmetic-cta h2 {
+    color: var(--cosmetic-heading);
+    line-height: 1.25;
+    margin-top: 0;
+    letter-spacing: -0.7px;
+}
+
+.cosmetic-hero p,
+.cosmetic-intro p,
+.cosmetic-section-heading p,
+.cosmetic-benefits-content > p {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.cosmetic-btn {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 23px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cosmetic-btn-primary {
+    color: var(--cosmetic-white);
+    background: var(--cosmetic-primary);
+    border: 1px solid var(--cosmetic-primary);
+}
+
+.cosmetic-btn-primary:hover {
+    background: var(--cosmetic-primary-dark);
+    border-color: var(--cosmetic-primary-dark);
+    transform: translateY(-2px);
+}
+
+.cosmetic-btn-outline {
+    color: var(--cosmetic-heading);
+    border: 1px solid var(--cosmetic-border);
+    background: var(--cosmetic-white);
+}
+
+.cosmetic-btn-outline:hover {
+    color: var(--cosmetic-primary);
+    border-color: var(--cosmetic-primary);
+}
+
+.cosmetic-btn-light {
+    color: var(--cosmetic-primary-dark);
+    background: var(--cosmetic-white);
+}
+
+.cosmetic-btn-light:hover {
+    background: #eaf7f8;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.cosmetic-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0 95px;
+    background:
+        radial-gradient(circle at 90% 15%, #dff3f5 0, transparent 29%),
+        linear-gradient(120deg, #f6fbfc 0%, #ffffff 60%, #edf8f9 100%);
+}
+
+.cosmetic-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.cosmetic-eyebrow,
+.cosmetic-section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--cosmetic-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.cosmetic-eyebrow {
+    padding: 10px 15px;
+    background: #e5f5f6;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+.cosmetic-hero h1 {
+    margin: 22px 0 20px;
+    font-size: clamp(36px, 4.2vw, 54px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.cosmetic-hero h1 span {
+    color: var(--cosmetic-primary);
+}
+
+.cosmetic-hero-content > p {
+    max-width: 510px;
+    margin-bottom: 28px;
+}
+
+.cosmetic-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.cosmetic-trust {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 32px;
+}
+
+.cosmetic-trust-icon {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--cosmetic-primary);
+    background: #e4f4f5;
+    border-radius: 12px;
+    font-size: 19px;
+}
+
+.cosmetic-trust strong,
+.cosmetic-trust span {
+    display: block;
+}
+
+.cosmetic-trust strong {
+    color: var(--cosmetic-heading);
+    font-size: 13px;
+}
+
+.cosmetic-trust span {
+    font-size: 11px;
+}
+
+.cosmetic-hero-visual {
+    position: relative;
+    min-width: 0;
+    padding: 0 12px 20px 0;
+}
+
+.cosmetic-hero-image {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 180px 180px 22px 22px;
+    background: #e2eff1;
+    box-shadow: var(--cosmetic-shadow);
+    z-index: 1;
+}
+
+.cosmetic-hero-image img,
+.cosmetic-intro-visual > img,
+.cosmetic-benefits-visual > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cosmetic-floating-card {
+    position: absolute;
+    left: -35px;
+    bottom: 48px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--cosmetic-white);
+    border: 1px solid var(--cosmetic-border);
+    border-radius: 13px;
+    box-shadow: var(--cosmetic-shadow);
+}
+
+.cosmetic-floating-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    color: var(--cosmetic-primary);
+    background: #e5f5f6;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.cosmetic-floating-card strong,
+.cosmetic-floating-card span {
+    display: block;
+}
+
+.cosmetic-floating-card strong {
+    color: var(--cosmetic-heading);
+    font-size: 12px;
+}
+
+.cosmetic-floating-card div > span {
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+.cosmetic-decoration {
+    position: absolute;
+    border: 1px solid rgba(8, 127, 140, 0.22);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.cosmetic-decoration-one {
+    width: 100px;
+    height: 100px;
+    top: -28px;
+    right: -25px;
+}
+
+.cosmetic-decoration-two {
+    width: 55px;
+    height: 55px;
+    bottom: -5px;
+    left: 18px;
+    background: #dff3f5;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.cosmetic-intro-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.cosmetic-intro-visual {
+    position: relative;
+    height: 430px;
+    min-width: 0;
+    background: #e7f2f4;
+    border-radius: 18px;
+}
+
+.cosmetic-intro-visual > img {
+    border-radius: 18px;
+}
+
+.cosmetic-image-label {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    color: var(--cosmetic-heading);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cosmetic-image-label i {
+    color: var(--cosmetic-primary);
+    font-size: 19px;
+}
+
+.cosmetic-intro h2,
+.cosmetic-benefits h2 {
+    margin: 15px 0 20px;
+    font-size: clamp(29px, 3vw, 38px);
+}
+
+.cosmetic-intro-content > p {
+    margin-bottom: 16px;
+}
+
+.cosmetic-check-list {
+    display: grid;
+    gap: 13px;
+    margin: 25px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cosmetic-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: var(--cosmetic-heading);
+    font-size: 13px;
+}
+
+.cosmetic-check-list i {
+    margin-top: 5px;
+    color: var(--cosmetic-primary);
+}
+
+.cosmetic-text-link,
+.cosmetic-treatment-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--cosmetic-primary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cosmetic-text-link:hover,
+.cosmetic-treatment-card a:hover {
+    color: var(--cosmetic-primary-dark);
+    gap: 14px;
+}
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.cosmetic-section-heading {
+    max-width: 680px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.cosmetic-section-heading h2 {
+    margin: 15px 0;
+    font-size: clamp(29px, 3vw, 38px);
+}
+
+.cosmetic-section-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   TREATMENT CARDS
+========================================= */
+
+.cosmetic-treatments {
+    background: var(--cosmetic-light);
+}
+
+.cosmetic-treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.cosmetic-treatment-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 29px 23px;
+    background: var(--cosmetic-white);
+    border: 1px solid var(--cosmetic-border);
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cosmetic-treatment-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--cosmetic-shadow);
+}
+
+.cosmetic-card-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    color: var(--cosmetic-primary);
+    background: #e7f5f6;
+    border-radius: 14px;
+    font-size: 24px;
+}
+
+.cosmetic-treatment-card h3 {
+    margin: 22px 0 10px;
+    color: var(--cosmetic-heading);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cosmetic-treatment-card p {
+    margin: 0 0 22px;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.cosmetic-treatment-card a {
+    margin-top: auto;
+    font-size: 11px;
+}
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.cosmetic-benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.cosmetic-benefits-content > p {
+    margin-bottom: 28px;
+}
+
+.cosmetic-benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 24px;
+}
+
+.cosmetic-benefit-item > span {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--cosmetic-primary);
+    background: #e6f5f6;
+    border-radius: 50%;
+}
+
+.cosmetic-benefit-item h3 {
+    margin: 0 0 5px;
+    color: var(--cosmetic-heading);
+    font-size: 14px;
+}
+
+.cosmetic-benefit-item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.cosmetic-benefits-visual {
+    position: relative;
+    height: 440px;
+    min-width: 0;
+    border-radius: 18px;
+    background: #e4eff1;
+}
+
+.cosmetic-benefits-visual > img {
+    border-radius: 18px;
+}
+
+.cosmetic-benefits-note {
+    position: absolute;
+    right: -20px;
+    bottom: 25px;
+    max-width: calc(100% - 15px);
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px 20px;
+    background: var(--cosmetic-white);
+    border-radius: 12px;
+    box-shadow: var(--cosmetic-shadow);
+}
+
+.cosmetic-benefits-note > i {
+    font-size: 25px;
+    color: var(--cosmetic-primary);
+}
+
+.cosmetic-benefits-note strong,
+.cosmetic-benefits-note span {
+    display: block;
+}
+
+.cosmetic-benefits-note strong {
+    color: var(--cosmetic-heading);
+    font-size: 12px;
+}
+
+.cosmetic-benefits-note span {
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.cosmetic-process {
+    background: var(--cosmetic-light);
+}
+
+.cosmetic-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cosmetic-process-card {
+    position: relative;
+    min-width: 0;
+    padding: 30px 22px;
+    background: var(--cosmetic-white);
+    border: 1px solid var(--cosmetic-border);
+    border-radius: 14px;
+}
+
+.cosmetic-step-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #dcebed;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.cosmetic-process-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    color: var(--cosmetic-primary);
+    background: #e6f5f6;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.cosmetic-process-card h3 {
+    margin: 22px 0 10px;
+    color: var(--cosmetic-heading);
+    font-size: 15px;
+}
+
+.cosmetic-process-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   AFTERCARE
+========================================= */
+
+.cosmetic-aftercare {
+    padding: 35px 0;
+    background: #eaf6f7;
+}
+
+.cosmetic-aftercare-inner {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cosmetic-aftercare-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--cosmetic-primary);
+    background: var(--cosmetic-white);
+    border-radius: 16px;
+    font-size: 27px;
+}
+
+.cosmetic-aftercare h2 {
+    margin: 0 0 8px;
+    font-size: 23px;
+}
+
+.cosmetic-aftercare p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
+.cosmetic-cta {
+    padding-top: 85px;
+    padding-bottom: 95px;
+}
+
+.cosmetic-cta-box {
+    position: relative;
+    overflow: hidden;
+    padding: 58px 60px;
+    background: linear-gradient(125deg, #087f8c, #075e6c);
+    border-radius: 20px;
+}
+
+.cosmetic-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.cosmetic-cta-content > span {
+    color: #c5eff1;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.cosmetic-cta h2 {
+    margin: 14px 0;
+    color: var(--cosmetic-white);
+    font-size: clamp(28px, 3.5vw, 40px);
+}
+
+.cosmetic-cta p {
+    max-width: 570px;
+    margin: 0 0 25px;
+    color: #e1f3f4;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.cosmetic-cta-decoration {
+    position: absolute;
+    right: 35px;
+    bottom: -65px;
+    color: rgba(255, 255, 255, 0.09);
+    font-size: 230px;
+    transform: rotate(-20deg);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+    .cosmetic-hero-grid {
+        gap: 38px;
+    }
+
+    .cosmetic-hero-image {
+        height: 400px;
+    }
+
+    .cosmetic-intro-grid,
+    .cosmetic-benefits-grid {
+        gap: 40px;
+    }
+
+    .cosmetic-treatment-grid,
+    .cosmetic-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cosmetic-floating-card {
+        left: -15px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .cosmetic-container {
+        width: min(100% - 36px, 560px);
+    }
+
+    .cosmetic-hero {
+        padding: 125px 0 65px;
+    }
+
+    .cosmetic-hero-grid,
+    .cosmetic-intro-grid,
+    .cosmetic-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .cosmetic-hero h1 {
+        font-size: clamp(34px, 8vw, 44px);
+    }
+
+    .cosmetic-hero-content > p,
+    .cosmetic-intro p,
+    .cosmetic-section-heading p,
+    .cosmetic-benefits-content > p {
+        font-size: 13px;
+    }
+
+    .cosmetic-hero-visual {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        padding-left: 8px;
+    }
+
+    .cosmetic-hero-image {
+        height: 370px;
+        border-radius: 150px 150px 18px 18px;
+    }
+
+    .cosmetic-floating-card {
+        left: 0;
+        bottom: 35px;
+        padding: 12px 14px;
+    }
+
+    .cosmetic-intro-visual,
+    .cosmetic-benefits-visual {
+        height: 350px;
+    }
+
+    .cosmetic-intro h2,
+    .cosmetic-benefits h2,
+    .cosmetic-section-heading h2 {
+        font-size: 30px;
+    }
+
+    .cosmetic-treatment-grid,
+    .cosmetic-process-grid {
+        gap: 15px;
+    }
+
+    .cosmetic-treatment-card {
+        padding: 22px 17px;
+    }
+
+    .cosmetic-treatment-card h3 {
+        font-size: 14px;
+    }
+
+    .cosmetic-treatment-card p,
+    .cosmetic-process-card p {
+        font-size: 11px;
+    }
+
+    .cosmetic-process-card {
+        padding: 23px 17px;
+    }
+
+    .cosmetic-benefits-note {
+        right: 10px;
+        bottom: 15px;
+    }
+
+    .cosmetic-aftercare-inner {
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .cosmetic-aftercare-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .cosmetic-aftercare h2 {
+        font-size: 19px;
+    }
+
+    .cosmetic-aftercare p {
+        font-size: 12px;
+    }
+
+    .cosmetic-cta {
+        padding: 60px 0;
+    }
+
+    .cosmetic-cta-box {
+        padding: 38px 27px;
+    }
+
+    .cosmetic-cta-decoration {
+        right: -35px;
+        font-size: 150px;
+    }
+
+    .cosmetic-cta p {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+    .cosmetic-container {
+        width: calc(100% - 30px);
+    }
+
+    .cosmetic-hero {
+        padding-top: 115px;
+    }
+
+    .cosmetic-hero h1 {
+        font-size: 33px;
+    }
+
+    .cosmetic-eyebrow,
+    .cosmetic-section-tag {
+        font-size: 10px;
+    }
+
+    .cosmetic-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cosmetic-btn {
+        width: 100%;
+        padding: 13px 15px;
+        font-size: 12px;
+    }
+
+    .cosmetic-hero-image {
+        height: 310px;
+    }
+
+    .cosmetic-floating-card {
+        left: -3px;
+        gap: 9px;
+        padding: 10px;
+    }
+
+    .cosmetic-floating-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .cosmetic-floating-card strong {
+        font-size: 10px;
+    }
+
+    .cosmetic-floating-card div > span {
+        font-size: 9px;
+    }
+
+    .cosmetic-intro-visual,
+    .cosmetic-benefits-visual {
+        height: 290px;
+    }
+
+    .cosmetic-image-label {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 12px;
+        font-size: 10px;
+    }
+
+    .cosmetic-intro h2,
+    .cosmetic-benefits h2,
+    .cosmetic-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .cosmetic-treatment-grid,
+    .cosmetic-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cosmetic-treatment-card {
+        padding: 24px;
+    }
+
+    .cosmetic-treatment-card h3 {
+        font-size: 16px;
+    }
+
+    .cosmetic-treatment-card p,
+    .cosmetic-process-card p {
+        font-size: 12px;
+    }
+
+    .cosmetic-process-card {
+        padding: 25px;
+    }
+
+    .cosmetic-aftercare-inner {
+        flex-direction: column;
+    }
+
+    .cosmetic-cta-box {
+        padding: 32px 21px;
+    }
+
+    .cosmetic-cta h2 {
+        font-size: 28px;
+    }
+}

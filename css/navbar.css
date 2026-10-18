@@ -6,7 +6,7 @@
     width: 100%;
     background: #ffffff;
 
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -487,4 +487,119 @@
         font-size: 14px;
     }
 
+}
+
+
+/* SERVICES DROPDOWN */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-service-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-service-link > a {
+    padding: 10px 0;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #284b57;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.active {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -15px;
+    width: 235px;
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #edf2f4;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(18, 59, 74, 0.12);
+    display: none;
+    z-index: 10002;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+.navbar-menu .dropdown-menu a {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    color: #284b57;
+    font-size: 13px;
+    border-radius: 6px;
+    white-space: normal;
+}
+
+.navbar-menu .dropdown-menu a:hover {
+    color: #11a8a2;
+    background: #f2fafa;
+}
+
+/* MOBILE DROPDOWN */
+
+@media (max-width: 768px) {
+    .nav-dropdown {
+        width: 100%;
+    }
+
+    .nav-service-link {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-service-link > a {
+        flex: 1;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        margin-top: 5px;
+        padding: 5px 8px;
+        border: none;
+        border-left: 2px solid #11a8a2;
+        border-radius: 0;
+        box-shadow: none;
+        background: #f8fcfc;
+    }
+
+    .navbar-menu .dropdown-menu a {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+
+/* OPEN SERVICES DROPDOWN ON HOVER */
+@media (min-width: 769px) {
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .nav-dropdown:hover .dropdown-toggle {
+        transform: rotate(180deg);
+    }
 }

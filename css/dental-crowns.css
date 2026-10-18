@@ -1,0 +1,913 @@
+:root {
+    --crown-primary: #087f8c;
+    --crown-dark: #066773;
+    --crown-heading: #163047;
+    --crown-text: #657586;
+    --crown-light: #f2f8fa;
+    --crown-white: #ffffff;
+    --crown-border: #e1ebef;
+    --crown-shadow: 0 15px 40px rgba(22, 48, 71, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--crown-text);
+    background: var(--crown-white);
+    line-height: 1.7;
+}
+
+.crowns-container {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+}
+
+.crowns-section-padding {
+    padding: 90px 0;
+}
+
+.crowns-hero h1,
+.crowns-intro h2,
+.crowns-section-heading h2,
+.crowns-benefits h2,
+.crowns-aftercare h2,
+.crowns-cta h2 {
+    color: var(--crown-heading);
+    line-height: 1.25;
+    letter-spacing: -0.6px;
+}
+
+/* BUTTONS */
+
+.crowns-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 51px;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.crowns-btn-primary {
+    color: var(--crown-white);
+    background: var(--crown-primary);
+    border: 1px solid var(--crown-primary);
+}
+
+.crowns-btn-primary:hover {
+    background: var(--crown-dark);
+    border-color: var(--crown-dark);
+    transform: translateY(-2px);
+}
+
+.crowns-btn-outline {
+    color: var(--crown-heading);
+    background: var(--crown-white);
+    border: 1px solid var(--crown-border);
+}
+
+.crowns-btn-outline:hover {
+    color: var(--crown-primary);
+    border-color: var(--crown-primary);
+}
+
+.crowns-btn-light {
+    color: var(--crown-dark);
+    background: var(--crown-white);
+}
+
+.crowns-btn-light:hover {
+    background: #eaf7f8;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+
+.crowns-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0 95px;
+    background:
+        radial-gradient(circle at 90% 15%, #dff3f5 0, transparent 29%),
+        linear-gradient(120deg, #f6fbfc 0%, #ffffff 60%, #edf8f9 100%);
+}
+
+.crowns-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.crowns-eyebrow,
+.crowns-section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--crown-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.crowns-eyebrow {
+    padding: 10px 15px;
+    background: #e5f5f6;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+.crowns-hero h1 {
+    margin: 22px 0 18px;
+    font-size: clamp(36px, 4.2vw, 54px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.crowns-hero h1 span {
+    color: var(--crown-primary);
+}
+
+.crowns-hero-content > p {
+    max-width: 510px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.crowns-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.crowns-trust {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 32px;
+}
+
+.crowns-trust-icon {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--crown-primary);
+    background: #e5f5f6;
+    border-radius: 12px;
+    font-size: 19px;
+}
+
+.crowns-trust strong,
+.crowns-trust span {
+    display: block;
+}
+
+.crowns-trust strong {
+    color: var(--crown-heading);
+    font-size: 13px;
+}
+
+.crowns-trust div span {
+    font-size: 11px;
+}
+
+.crowns-hero-visual {
+    position: relative;
+    min-width: 0;
+    padding: 0 12px 20px 0;
+}
+
+.crowns-hero-image {
+    position: relative;
+    z-index: 1;
+    height: 455px;
+    overflow: hidden;
+    background: #e3eff1;
+    border-radius: 180px 180px 22px 22px;
+    box-shadow: var(--crown-shadow);
+}
+
+.crowns-hero-image img,
+.crowns-intro-visual > img,
+.crowns-benefits-visual > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.crowns-floating-card {
+    position: absolute;
+    z-index: 2;
+    left: -32px;
+    bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 19px;
+    background: var(--crown-white);
+    border: 1px solid var(--crown-border);
+    border-radius: 12px;
+    box-shadow: var(--crown-shadow);
+}
+
+.crowns-floating-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--crown-primary);
+    background: #e5f5f6;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+.crowns-floating-card strong,
+.crowns-floating-card div span {
+    display: block;
+}
+
+.crowns-floating-card strong {
+    color: var(--crown-heading);
+    font-size: 12px;
+}
+
+.crowns-floating-card div span {
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+.crowns-decoration {
+    position: absolute;
+    border: 1px solid rgba(8, 127, 140, 0.22);
+    border-radius: 50%;
+}
+
+.crowns-decoration-one {
+    width: 100px;
+    height: 100px;
+    top: -25px;
+    right: -20px;
+}
+
+.crowns-decoration-two {
+    width: 55px;
+    height: 55px;
+    bottom: -5px;
+    left: 15px;
+    background: #dff3f5;
+}
+
+/* INTRODUCTION */
+
+.crowns-intro-grid,
+.crowns-benefits-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 72px;
+}
+
+.crowns-intro-visual {
+    position: relative;
+    height: 420px;
+    min-width: 0;
+    background: #e5f0f2;
+    border-radius: 18px;
+}
+
+.crowns-intro-visual > img,
+.crowns-benefits-visual > img {
+    border-radius: 18px;
+}
+
+.crowns-image-caption {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    color: var(--crown-heading);
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.crowns-image-caption i {
+    color: var(--crown-primary);
+    font-size: 18px;
+}
+
+.crowns-intro h2,
+.crowns-benefits h2 {
+    margin: 15px 0 20px;
+    font-size: clamp(29px, 3vw, 38px);
+}
+
+.crowns-intro-content > p,
+.crowns-benefits-content > p {
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.95;
+}
+
+.crowns-check-list {
+    display: grid;
+    gap: 13px;
+    margin: 24px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.crowns-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: var(--crown-heading);
+    font-size: 12px;
+}
+
+.crowns-check-list i {
+    margin-top: 5px;
+    color: var(--crown-primary);
+}
+
+.crowns-text-link,
+.crowns-option-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--crown-primary);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.crowns-text-link:hover,
+.crowns-option-card a:hover {
+    color: var(--crown-dark);
+    gap: 13px;
+}
+
+/* SECTION HEADINGS */
+
+.crowns-section-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.crowns-section-heading h2 {
+    margin: 15px 0;
+    font-size: clamp(29px, 3vw, 38px);
+}
+
+.crowns-section-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* CROWN OPTIONS */
+
+.crowns-options,
+.crowns-process {
+    background: var(--crown-light);
+}
+
+.crowns-options-grid,
+.crowns-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 21px;
+}
+
+.crowns-option-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px 22px;
+    background: var(--crown-white);
+    border: 1px solid var(--crown-border);
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crowns-option-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--crown-shadow);
+}
+
+.crowns-option-icon {
+    width: 57px;
+    height: 57px;
+    display: grid;
+    place-items: center;
+    color: var(--crown-primary);
+    background: #e5f5f6;
+    border-radius: 13px;
+    font-size: 23px;
+}
+
+.crowns-option-card h3 {
+    margin: 21px 0 10px;
+    color: var(--crown-heading);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.crowns-option-card p {
+    margin: 0 0 20px;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.crowns-option-card a {
+    margin-top: auto;
+    font-size: 10px;
+}
+
+/* BENEFITS */
+
+.crowns-benefits-visual {
+    position: relative;
+    height: 435px;
+    min-width: 0;
+    background: #e5f0f2;
+    border-radius: 18px;
+}
+
+.crowns-benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 23px;
+}
+
+.crowns-benefit-item > span {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--crown-primary);
+    background: #e5f5f6;
+    border-radius: 50%;
+}
+
+.crowns-benefit-item h3 {
+    margin: 0 0 5px;
+    color: var(--crown-heading);
+    font-size: 13px;
+}
+
+.crowns-benefit-item p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.crowns-benefits-note {
+    position: absolute;
+    right: -18px;
+    bottom: 23px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: calc(100% - 10px);
+    padding: 16px 19px;
+    background: var(--crown-white);
+    border-radius: 12px;
+    box-shadow: var(--crown-shadow);
+}
+
+.crowns-benefits-note > i {
+    color: var(--crown-primary);
+    font-size: 24px;
+}
+
+.crowns-benefits-note strong,
+.crowns-benefits-note span {
+    display: block;
+}
+
+.crowns-benefits-note strong {
+    color: var(--crown-heading);
+    font-size: 11px;
+}
+
+.crowns-benefits-note span {
+    margin-top: 3px;
+    font-size: 9px;
+}
+
+/* PROCESS */
+
+.crowns-process-card {
+    position: relative;
+    min-width: 0;
+    padding: 27px 21px;
+    background: var(--crown-white);
+    border: 1px solid var(--crown-border);
+    border-radius: 14px;
+}
+
+.crowns-step-number {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    color: #dcebed;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.crowns-process-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    color: var(--crown-primary);
+    background: #e5f5f6;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.crowns-process-card h3 {
+    margin: 20px 0 9px;
+    color: var(--crown-heading);
+    font-size: 14px;
+}
+
+.crowns-process-card p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* AFTERCARE */
+
+.crowns-aftercare {
+    padding: 35px 0;
+    background: #eaf6f7;
+}
+
+.crowns-aftercare-inner {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.crowns-aftercare-icon {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--crown-primary);
+    background: var(--crown-white);
+    border-radius: 15px;
+    font-size: 26px;
+}
+
+.crowns-aftercare h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.crowns-aftercare p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* CTA */
+
+.crowns-cta {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
+.crowns-cta-box {
+    position: relative;
+    overflow: hidden;
+    padding: 55px 58px;
+    background: linear-gradient(125deg, #087f8c, #075e6c);
+    border-radius: 20px;
+}
+
+.crowns-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.crowns-cta-content > span {
+    color: #c5eff1;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.crowns-cta h2 {
+    margin: 14px 0;
+    color: var(--crown-white);
+    font-size: clamp(28px, 3.5vw, 40px);
+}
+
+.crowns-cta p {
+    max-width: 570px;
+    margin: 0 0 25px;
+    color: #e1f3f4;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.crowns-cta-decoration {
+    position: absolute;
+    right: 35px;
+    bottom: -65px;
+    color: rgba(255, 255, 255, 0.09);
+    font-size: 225px;
+    transform: rotate(-20deg);
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .crowns-hero-grid {
+        gap: 38px;
+    }
+
+    .crowns-hero-image {
+        height: 390px;
+    }
+
+    .crowns-intro-grid,
+    .crowns-benefits-grid {
+        gap: 38px;
+    }
+
+    .crowns-options-grid,
+    .crowns-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .crowns-floating-card {
+        left: -15px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .crowns-section-padding {
+        padding: 65px 0;
+    }
+
+    .crowns-container {
+        width: min(100% - 36px, 560px);
+    }
+
+    .crowns-hero {
+        padding: 125px 0 65px;
+    }
+
+    .crowns-hero-grid,
+    .crowns-intro-grid,
+    .crowns-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .crowns-hero h1 {
+        font-size: clamp(34px, 8vw, 44px);
+    }
+
+    .crowns-hero-content > p,
+    .crowns-intro-content > p,
+    .crowns-benefits-content > p,
+    .crowns-section-heading p {
+        font-size: 12px;
+    }
+
+    .crowns-hero-visual {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        padding-left: 8px;
+    }
+
+    .crowns-hero-image {
+        height: 365px;
+        border-radius: 145px 145px 18px 18px;
+    }
+
+    .crowns-floating-card {
+        left: 0;
+        bottom: 35px;
+        padding: 12px 14px;
+    }
+
+    .crowns-intro-visual,
+    .crowns-benefits-visual {
+        height: 345px;
+    }
+
+    .crowns-intro h2,
+    .crowns-benefits h2,
+    .crowns-section-heading h2 {
+        font-size: 29px;
+    }
+
+    .crowns-options-grid,
+    .crowns-process-grid {
+        gap: 15px;
+    }
+
+    .crowns-option-card,
+    .crowns-process-card {
+        padding: 22px 17px;
+    }
+
+    .crowns-option-card h3 {
+        font-size: 13px;
+    }
+
+    .crowns-option-card p,
+    .crowns-process-card p {
+        font-size: 10px;
+    }
+
+    .crowns-benefits-note {
+        right: 8px;
+        bottom: 15px;
+    }
+
+    .crowns-aftercare-inner {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .crowns-aftercare-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 21px;
+    }
+
+    .crowns-aftercare h2 {
+        font-size: 18px;
+    }
+
+    .crowns-aftercare p {
+        font-size: 11px;
+    }
+
+    .crowns-cta {
+        padding: 60px 0;
+    }
+
+    .crowns-cta-box {
+        padding: 38px 27px;
+    }
+
+    .crowns-cta-decoration {
+        right: -30px;
+        font-size: 150px;
+    }
+
+    .crowns-cta p {
+        font-size: 12px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+    .crowns-container {
+        width: calc(100% - 30px);
+    }
+
+    .crowns-hero {
+        padding-top: 115px;
+    }
+
+    .crowns-hero h1 {
+        font-size: 33px;
+    }
+
+    .crowns-eyebrow,
+    .crowns-section-tag {
+        font-size: 9px;
+    }
+
+    .crowns-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .crowns-btn {
+        width: 100%;
+        padding: 13px 15px;
+        font-size: 12px;
+    }
+
+    .crowns-hero-image {
+        height: 305px;
+    }
+
+    .crowns-floating-card {
+        left: -3px;
+        gap: 9px;
+        padding: 10px;
+    }
+
+    .crowns-floating-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .crowns-floating-card strong {
+        font-size: 10px;
+    }
+
+    .crowns-floating-card div span {
+        font-size: 9px;
+    }
+
+    .crowns-intro-visual,
+    .crowns-benefits-visual {
+        height: 285px;
+    }
+
+    .crowns-image-caption {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        padding: 11px;
+        font-size: 9px;
+    }
+
+    .crowns-intro h2,
+    .crowns-benefits h2,
+    .crowns-section-heading h2 {
+        font-size: 26px;
+    }
+
+    .crowns-options-grid,
+    .crowns-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .crowns-option-card,
+    .crowns-process-card {
+        padding: 24px;
+    }
+
+    .crowns-option-card h3 {
+        font-size: 15px;
+    }
+
+    .crowns-option-card p,
+    .crowns-process-card p {
+        font-size: 11px;
+    }
+
+    .crowns-aftercare-inner {
+        flex-direction: column;
+    }
+
+    .crowns-cta-box {
+        padding: 31px 21px;
+    }
+
+    .crowns-cta h2 {
+        font-size: 27px;
+    }
+}

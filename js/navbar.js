@@ -1,7 +1,3 @@
-/* =========================================
-   SMILECARE REUSABLE NAVBAR
-========================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const navbarContainer =
@@ -10,11 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!navbarContainer) {
         return;
     }
-
-
-    /* =========================================
-       LOAD NAVBAR COMPONENT
-    ========================================= */
 
     fetch("components/navbar.html")
 
@@ -48,10 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-    /* =========================================
-       NAVBAR FUNCTIONS
-    ========================================= */
-
     function initializeNavbar() {
 
         const navbarToggle =
@@ -64,11 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!navbarToggle || !navbarMenu) {
             return;
         }
-
-
-        /* =========================================
-           HAMBURGER OPEN / CLOSE
-        ========================================= */
 
         navbarToggle.addEventListener(
             "click",
@@ -99,10 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
 
-
-        /* =========================================
-           CLOSE MENU AFTER LINK CLICK
-        ========================================= */
 
         const navbarLinks =
             navbarMenu.querySelectorAll("a");
@@ -136,11 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
         });
-
-
-        /* =========================================
-           CLOSE MENU OUTSIDE
-        ========================================= */
 
         document.addEventListener(
             "click",
@@ -178,10 +151,69 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
 
+        const servicesToggle =
+            document.getElementById("servicesDropdownToggle");
 
-        /* =========================================
-           ACTIVE PAGE
-        ========================================= */
+        const servicesDropdown =
+            document.getElementById("servicesDropdown");
+
+        if (servicesToggle && servicesDropdown) {
+
+            
+const servicesToggle =
+    document.getElementById("servicesDropdownToggle");
+
+const servicesDropdown =
+    document.getElementById("servicesDropdown");
+
+const servicesNav =
+    document.querySelector(".nav-dropdown");
+
+if (servicesToggle && servicesDropdown && servicesNav) {
+
+    servicesToggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const isOpen =
+            servicesDropdown.classList.toggle("open");
+
+        servicesToggle.classList.toggle("active", isOpen);
+
+        servicesToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+    });
+
+   
+    document.addEventListener("click", function (event) {
+        if (!servicesNav.contains(event.target)) {
+            servicesDropdown.classList.remove("open");
+            servicesToggle.classList.remove("active");
+            servicesToggle.setAttribute("aria-expanded", "false");
+        }
+    });
+}
+            document.addEventListener("click", function (event) {
+
+                if (
+                    !servicesDropdown.contains(event.target) &&
+                    !servicesToggle.contains(event.target)
+                ) {
+                    servicesDropdown.classList.remove("open");
+                    servicesToggle.classList.remove("active");
+
+                    servicesToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                }
+
+            });
+
+        }
+
 
         let currentPage =
             window.location.pathname

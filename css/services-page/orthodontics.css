@@ -1,0 +1,944 @@
+:root {
+    --ortho-primary: #087f8c;
+    --ortho-primary-dark: #066773;
+    --ortho-heading: #163047;
+    --ortho-text: #657586;
+    --ortho-bg: #f2f8fa;
+    --ortho-white: #ffffff;
+    --ortho-border: #e1ebef;
+    --ortho-shadow: 0 15px 40px rgba(22, 48, 71, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--ortho-text);
+    background: var(--ortho-white);
+    line-height: 1.7;
+}
+
+.ortho-container {
+    width: min(1160px, 90%);
+    margin-inline: auto;
+}
+
+.ortho-section {
+    padding: 95px 0;
+}
+
+.ortho-section-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--ortho-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.ortho-section-heading {
+    max-width: 690px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.ortho-section-heading h2,
+.ortho-intro-content h2,
+.ortho-benefits-content h2,
+.ortho-care-content h2 {
+    margin: 0 0 18px;
+    color: var(--ortho-heading);
+    font-size: clamp(28px, 3.3vw, 40px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.ortho-section-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+/* Buttons */
+
+.ortho-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    min-height: 52px;
+    padding: 14px 23px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease,
+                border-color 0.25s ease, transform 0.25s ease;
+}
+
+.ortho-btn:hover {
+    transform: translateY(-3px);
+}
+
+.ortho-btn-primary {
+    color: var(--ortho-white);
+    background: var(--ortho-primary);
+}
+
+.ortho-btn-primary:hover {
+    background: var(--ortho-primary-dark);
+}
+
+.ortho-btn-outline {
+    color: var(--ortho-heading);
+    border-color: var(--ortho-border);
+    background: var(--ortho-white);
+}
+
+.ortho-btn-outline:hover {
+    color: var(--ortho-primary);
+    border-color: var(--ortho-primary);
+}
+
+/* Hero */
+
+.ortho-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0 85px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(8, 127, 140, 0.11), transparent 28%),
+        linear-gradient(135deg, #f3fafb 0%, #ffffff 65%);
+}
+
+.ortho-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.ortho-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    padding: 9px 14px;
+    border: 1px solid #d8edef;
+    border-radius: 50px;
+    color: var(--ortho-primary-dark);
+    background: #eaf6f7;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ortho-hero-content h1 {
+    max-width: 600px;
+    margin: 0 0 22px;
+    color: var(--ortho-heading);
+    font-size: clamp(37px, 4.5vw, 56px);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -1.5px;
+}
+
+.ortho-hero-content > p {
+    max-width: 540px;
+    margin: 0 0 28px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.ortho-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.ortho-trust {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 32px;
+}
+
+.ortho-trust-icon {
+    display: grid;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 13px;
+    color: var(--ortho-primary);
+    background: #e7f5f6;
+    font-size: 20px;
+}
+
+.ortho-trust strong,
+.ortho-trust span {
+    display: block;
+}
+
+.ortho-trust strong {
+    color: var(--ortho-heading);
+    font-size: 13px;
+}
+
+.ortho-trust span {
+    margin-top: 3px;
+    font-size: 11px;
+}
+
+.ortho-hero-image {
+    position: relative;
+    min-width: 0;
+    padding: 0 0 25px 25px;
+}
+
+.ortho-hero-image::before {
+    position: absolute;
+    z-index: 0;
+    top: -20px;
+    right: -15px;
+    width: 75%;
+    height: 85%;
+    border-radius: 25px;
+    background: #dff1f3;
+    content: "";
+}
+
+.ortho-hero-image > img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 440px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: var(--ortho-shadow);
+}
+
+.ortho-floating-card {
+    position: absolute;
+    z-index: 2;
+    right: -20px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    max-width: 260px;
+    padding: 17px 20px;
+    border: 1px solid rgba(225, 235, 239, 0.8);
+    border-radius: 13px;
+    background: var(--ortho-white);
+    box-shadow: var(--ortho-shadow);
+}
+
+.ortho-floating-icon {
+    display: grid;
+    flex: 0 0 43px;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    border-radius: 11px;
+    color: var(--ortho-primary);
+    background: #eaf6f7;
+    font-size: 19px;
+}
+
+.ortho-floating-card strong,
+.ortho-floating-card span {
+    display: block;
+}
+
+.ortho-floating-card strong {
+    color: var(--ortho-heading);
+    font-size: 12px;
+}
+
+.ortho-floating-card div span {
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+/* Intro */
+
+.ortho-intro-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.ortho-intro-image {
+    position: relative;
+    padding: 0 20px 20px 0;
+}
+
+.ortho-intro-image::after {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    width: 75%;
+    height: 75%;
+    border-radius: 20px;
+    background: #e2f2f4;
+    content: "";
+}
+
+.ortho-intro-image img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 410px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: var(--ortho-shadow);
+}
+
+.ortho-image-label {
+    position: absolute;
+    z-index: 2;
+    right: -18px;
+    bottom: 38px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 17px;
+    border-radius: 10px;
+    color: var(--ortho-heading);
+    background: var(--ortho-white);
+    box-shadow: var(--ortho-shadow);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ortho-image-label i {
+    color: var(--ortho-primary);
+    font-size: 18px;
+}
+
+.ortho-intro-content h2 {
+    font-size: clamp(28px, 3.2vw, 38px);
+}
+
+.ortho-intro-content > p,
+.ortho-benefits-content > p {
+    margin: 0 0 17px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.ortho-check-list {
+    display: grid;
+    gap: 12px;
+    margin: 25px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ortho-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: var(--ortho-heading);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.ortho-check-list i {
+    margin-top: 5px;
+    color: var(--ortho-primary);
+}
+
+.ortho-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ortho-primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ortho-text-link i {
+    transition: transform 0.2s ease;
+}
+
+.ortho-text-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Treatment cards */
+
+.ortho-treatments {
+    background: var(--ortho-bg);
+}
+
+.ortho-treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.ortho-treatment-card {
+    padding: 30px 23px;
+    border: 1px solid var(--ortho-border);
+    border-radius: 14px;
+    background: var(--ortho-white);
+    box-shadow: 0 8px 25px rgba(22, 48, 71, 0.035);
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.ortho-treatment-card:hover {
+    transform: translateY(-7px);
+    border-color: #b9dfe3;
+    box-shadow: var(--ortho-shadow);
+}
+
+.ortho-card-icon {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 22px;
+    place-items: center;
+    border-radius: 15px;
+    color: var(--ortho-primary);
+    background: #eaf6f7;
+    font-size: 23px;
+}
+
+.ortho-treatment-card h3 {
+    margin: 0 0 12px;
+    color: var(--ortho-heading);
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.ortho-treatment-card p {
+    margin: 0 0 20px;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.ortho-treatment-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ortho-primary);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ortho-treatment-card a i {
+    transition: transform 0.2s ease;
+}
+
+.ortho-treatment-card a:hover i {
+    transform: translateX(4px);
+}
+
+/* Benefits */
+
+.ortho-benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.ortho-benefits-content h2 {
+    font-size: clamp(28px, 3.2vw, 38px);
+}
+
+.ortho-benefit-list {
+    display: grid;
+    gap: 23px;
+    margin-top: 30px;
+}
+
+.ortho-benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.ortho-benefit-item > span {
+    display: grid;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 13px;
+    color: var(--ortho-primary);
+    background: #eaf6f7;
+    font-size: 19px;
+}
+
+.ortho-benefit-item h3 {
+    margin: 0 0 5px;
+    color: var(--ortho-heading);
+    font-size: 15px;
+}
+
+.ortho-benefit-item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.ortho-benefits-image {
+    position: relative;
+}
+
+.ortho-benefits-image img {
+    display: block;
+    width: 100%;
+    height: 440px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: var(--ortho-shadow);
+}
+
+.ortho-benefits-note {
+    position: absolute;
+    right: -18px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 270px;
+    padding: 17px 20px;
+    border-radius: 12px;
+    color: var(--ortho-heading);
+    background: var(--ortho-white);
+    box-shadow: var(--ortho-shadow);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.ortho-benefits-note i {
+    color: var(--ortho-primary);
+    font-size: 21px;
+}
+
+/* Process */
+
+.ortho-process {
+    background: var(--ortho-bg);
+}
+
+.ortho-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.ortho-process-card {
+    position: relative;
+    padding: 30px 23px;
+    border: 1px solid var(--ortho-border);
+    border-radius: 14px;
+    background: var(--ortho-white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ortho-process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ortho-shadow);
+}
+
+.ortho-step-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #d9e9eb;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.ortho-process-icon {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+    place-items: center;
+    border-radius: 14px;
+    color: var(--ortho-primary);
+    background: #eaf6f7;
+    font-size: 21px;
+}
+
+.ortho-process-card h3 {
+    margin: 0 0 12px;
+    color: var(--ortho-heading);
+    font-size: 15px;
+}
+
+.ortho-process-card p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Care section */
+
+.ortho-care {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.ortho-care-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 38px;
+    border: 1px solid #dcecef;
+    border-radius: 17px;
+    background: linear-gradient(110deg, #f0f9fa, #ffffff);
+}
+
+.ortho-care-icon {
+    display: grid;
+    flex: 0 0 65px;
+    width: 65px;
+    height: 65px;
+    place-items: center;
+    border-radius: 17px;
+    color: var(--ortho-primary);
+    background: #dff1f3;
+    font-size: 27px;
+}
+
+.ortho-care-content {
+    flex: 1;
+}
+
+.ortho-care-content .ortho-section-tag {
+    margin-bottom: 8px;
+}
+
+.ortho-care-content h2 {
+    margin-bottom: 9px;
+    font-size: 23px;
+}
+
+.ortho-care-content p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* CTA */
+
+.ortho-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 0;
+    color: var(--ortho-white);
+    background: linear-gradient(120deg, #087f8c, #066773);
+}
+
+.ortho-cta::before,
+.ortho-cta::after {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.ortho-cta::before {
+    top: -150px;
+    left: -70px;
+}
+
+.ortho-cta::after {
+    right: -70px;
+    bottom: -180px;
+    width: 350px;
+    height: 350px;
+}
+
+.ortho-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    text-align: center;
+}
+
+.ortho-cta-icon {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 25px;
+}
+
+.ortho-cta h2 {
+    margin: 0 0 15px;
+    font-size: clamp(27px, 3.5vw, 40px);
+    line-height: 1.35;
+}
+
+.ortho-cta p {
+    max-width: 600px;
+    margin: 0 auto 27px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.ortho-btn-light {
+    color: var(--ortho-primary-dark);
+    background: var(--ortho-white);
+}
+
+.ortho-btn-light:hover {
+    color: var(--ortho-heading);
+    background: #e9f5f6;
+}
+
+/* Responsive: Laptop and tablet */
+
+@media (max-width: 1050px) {
+    .ortho-hero-grid {
+        gap: 40px;
+    }
+
+    .ortho-treatment-grid,
+    .ortho-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ortho-intro-grid,
+    .ortho-benefits-grid {
+        gap: 45px;
+    }
+
+    .ortho-care-box {
+        flex-wrap: wrap;
+    }
+
+    .ortho-care-content {
+        flex-basis: calc(100% - 95px);
+    }
+
+    .ortho-care-box > .ortho-btn {
+        margin-left: 90px;
+    }
+}
+
+/* Responsive: Mobile */
+
+@media (max-width: 768px) {
+    .ortho-container {
+        width: min(100% - 36px, 560px);
+    }
+
+    .ortho-section {
+        padding: 65px 0;
+    }
+
+    .ortho-hero {
+        padding: 125px 0 65px;
+    }
+
+    .ortho-hero-grid,
+    .ortho-intro-grid,
+    .ortho-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .ortho-hero-content h1 {
+        font-size: clamp(34px, 8vw, 45px);
+        letter-spacing: -0.8px;
+    }
+
+    .ortho-hero-content > p {
+        font-size: 13px;
+    }
+
+    .ortho-hero-image {
+        width: calc(100% - 8px);
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+
+    .ortho-hero-image::before {
+        top: -10px;
+        right: -5px;
+    }
+
+    .ortho-hero-image > img {
+        height: 330px;
+        border-radius: 15px;
+    }
+
+    .ortho-floating-card {
+        right: -5px;
+        max-width: 235px;
+        padding: 12px 14px;
+    }
+
+    .ortho-section-heading {
+        margin-bottom: 32px;
+    }
+
+    .ortho-section-heading h2,
+    .ortho-intro-content h2,
+    .ortho-benefits-content h2 {
+        font-size: 29px;
+    }
+
+    .ortho-intro-image {
+        max-width: 500px;
+        width: calc(100% - 10px);
+    }
+
+    .ortho-intro-image img {
+        height: 330px;
+    }
+
+    .ortho-image-label {
+        right: -8px;
+        bottom: 32px;
+        font-size: 10px;
+    }
+
+    .ortho-treatment-grid,
+    .ortho-process-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .ortho-treatment-card,
+    .ortho-process-card {
+        padding: 25px 22px;
+    }
+
+    .ortho-benefits-image {
+        width: calc(100% - 8px);
+    }
+
+    .ortho-benefits-image img {
+        height: 330px;
+    }
+
+    .ortho-benefits-note {
+        right: -8px;
+        bottom: 18px;
+        max-width: 245px;
+    }
+
+    .ortho-care {
+        padding: 55px 0;
+    }
+
+    .ortho-care-box {
+        align-items: flex-start;
+        gap: 17px;
+        padding: 25px 21px;
+    }
+
+    .ortho-care-icon {
+        flex-basis: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+        font-size: 21px;
+    }
+
+    .ortho-care-content {
+        flex-basis: calc(100% - 67px);
+    }
+
+    .ortho-care-content h2 {
+        font-size: 21px;
+    }
+
+    .ortho-care-box > .ortho-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .ortho-cta {
+        padding: 60px 0;
+    }
+
+    .ortho-cta h2 {
+        font-size: 29px;
+    }
+
+    .ortho-cta p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ortho-container {
+        width: calc(100% - 30px);
+    }
+
+    .ortho-hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .ortho-hero-buttons .ortho-btn {
+        width: 100%;
+    }
+
+    .ortho-hero-image > img {
+        height: 280px;
+    }
+
+    .ortho-intro-image img,
+    .ortho-benefits-image img {
+        height: 280px;
+    }
+
+    .ortho-floating-card {
+        right: -3px;
+        max-width: 215px;
+    }
+
+    .ortho-section-heading h2,
+    .ortho-intro-content h2,
+    .ortho-benefits-content h2 {
+        font-size: 26px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

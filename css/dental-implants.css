@@ -1,0 +1,703 @@
+:root {
+    --implant-primary: #087f8c;
+    --implant-primary-dark: #066773;
+    --implant-heading: #163047;
+    --implant-text: #657586;
+    --implant-bg: #ffffff;
+    --implant-soft-bg: #f2f8fa;
+    --implant-border: #e1ebef;
+    --implant-white: #ffffff;
+    --implant-shadow: 0 12px 35px rgba(22, 48, 71, 0.08);
+}
+
+/* BASE */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--implant-heading);
+    background: var(--implant-bg);
+    line-height: 1.7;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body img {
+    display: block;
+    max-width: 100%;
+}
+
+body a {
+    text-decoration: none;
+}
+
+main {
+    overflow: hidden;
+}
+
+.section-padding {
+    padding: 95px 7%;
+}
+
+.implant-section-tag {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--implant-primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+/* BUTTONS */
+
+.implant-primary-btn,
+.implant-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.implant-primary-btn {
+    background: var(--implant-primary);
+    color: var(--implant-white);
+    border: 1px solid var(--implant-primary);
+}
+
+.implant-primary-btn:hover {
+    background: var(--implant-primary-dark);
+    border-color: var(--implant-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(8, 127, 140, 0.18);
+}
+
+.implant-secondary-btn {
+    border: 1px solid #c8dfe4;
+    color: var(--implant-heading);
+    background: var(--implant-white);
+}
+
+.implant-secondary-btn:hover {
+    border-color: var(--implant-primary);
+    color: var(--implant-primary);
+    transform: translateY(-3px);
+}
+
+/* HERO */
+
+.implant-hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+    min-height: 610px;
+
+    /* Space for the fixed navbar */
+    padding: 145px 7% 85px;
+
+    background: linear-gradient(
+        135deg,
+        #eaf7fa 0%,
+        #f7fbfc 60%,
+        #ffffff 100%
+    );
+}
+
+.implant-hero-content {
+    max-width: 650px;
+}
+
+.implant-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 15px;
+    margin-bottom: 22px;
+    border: 1px solid #cde8ec;
+    border-radius: 30px;
+    background: var(--implant-white);
+    color: var(--implant-primary-dark);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.implant-hero h1 {
+    margin: 0 0 22px;
+    color: var(--implant-heading);
+    font-size: clamp(39px, 5vw, 61px);
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+.implant-hero-content > p {
+    max-width: 580px;
+    margin: 0 0 28px;
+    color: var(--implant-text);
+    font-size: 15px;
+}
+
+.implant-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.implant-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+    margin-top: 30px;
+}
+
+.implant-trust div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--implant-heading);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.implant-trust i {
+    color: var(--implant-primary);
+    font-size: 17px;
+}
+
+.implant-hero-image {
+    position: relative;
+    min-width: 0;
+}
+
+.implant-hero-image > img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: var(--implant-shadow);
+}
+
+.implant-floating-card {
+    position: absolute;
+    right: -15px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 16px 20px;
+    border: 1px solid var(--implant-border);
+    border-radius: 12px;
+    background: var(--implant-white);
+    box-shadow: var(--implant-shadow);
+}
+
+.implant-floating-card > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #e5f5f6;
+    color: var(--implant-primary);
+}
+
+.implant-floating-card strong,
+.implant-floating-card span {
+    display: block;
+}
+
+.implant-floating-card strong {
+    font-size: 13px;
+}
+
+.implant-floating-card span {
+    margin-top: 3px;
+    color: var(--implant-text);
+    font-size: 11px;
+}
+
+/* ABOUT */
+
+.implant-about {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 65px;
+    background: var(--implant-bg);
+}
+
+.implant-about-image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.implant-about-content h2 {
+    margin: 0 0 20px;
+    color: var(--implant-heading);
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.25;
+}
+
+.implant-about-content > p {
+    margin: 0 0 17px;
+    color: var(--implant-text);
+    font-size: 14px;
+}
+
+.implant-about-points {
+    display: grid;
+    gap: 13px;
+    margin: 25px 0 30px;
+}
+
+.implant-about-points div {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.implant-about-points i {
+    margin-top: 5px;
+    color: var(--implant-primary);
+}
+
+/* SECTION HEADINGS */
+
+.implant-section-heading {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.implant-section-heading h2 {
+    margin: 0 0 17px;
+    color: var(--implant-heading);
+    font-size: clamp(29px, 4vw, 43px);
+    line-height: 1.25;
+}
+
+.implant-section-heading > p {
+    margin: 0;
+    color: var(--implant-text);
+    font-size: 15px;
+}
+
+/* TREATMENT OPTIONS */
+
+.implant-options {
+    background: var(--implant-soft-bg);
+}
+
+.implant-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.implant-option-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 27px;
+    border: 1px solid var(--implant-border);
+    border-radius: 15px;
+    background: var(--implant-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.implant-option-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--implant-shadow);
+}
+
+.implant-option-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 22px;
+    border-radius: 13px;
+    background: #e5f5f6;
+    color: var(--implant-primary);
+    font-size: 23px;
+}
+
+.implant-option-card h3 {
+    margin: 0 0 12px;
+    color: var(--implant-heading);
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.implant-option-card p {
+    margin: 0 0 22px;
+    color: var(--implant-text);
+    font-size: 13px;
+}
+
+.implant-option-card > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: auto;
+    color: var(--implant-primary-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.implant-option-card > a:hover {
+    color: var(--implant-primary);
+}
+
+/* BENEFITS */
+
+.implant-benefits {
+    background: var(--implant-white);
+}
+
+.implant-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.implant-benefit-card {
+    padding: 27px 22px;
+    border: 1px solid var(--implant-border);
+    border-radius: 14px;
+    background: var(--implant-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.implant-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--implant-shadow);
+}
+
+.implant-benefit-card > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    margin-bottom: 17px;
+    border-radius: 12px;
+    background: #eaf7fa;
+    color: var(--implant-primary);
+    font-size: 20px;
+}
+
+.implant-benefit-card h3 {
+    margin: 0 0 10px;
+    color: var(--implant-heading);
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.implant-benefit-card p {
+    margin: 0;
+    color: var(--implant-text);
+    font-size: 12px;
+}
+
+/* TREATMENT PROCESS */
+
+.implant-process {
+    background: var(--implant-soft-bg);
+}
+
+.implant-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.implant-process-card {
+    padding: 30px;
+    border: 1px solid var(--implant-border);
+    border-radius: 14px;
+    background: var(--implant-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.implant-process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--implant-shadow);
+}
+
+.implant-step-number {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--implant-primary);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.implant-process-card h3 {
+    margin: 0 0 10px;
+    color: var(--implant-heading);
+    font-size: 18px;
+}
+
+.implant-process-card p {
+    margin: 0;
+    color: var(--implant-text);
+    font-size: 13px;
+}
+
+/* AFTERCARE */
+
+.implant-aftercare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    background: var(--implant-white);
+}
+
+.implant-aftercare-content h2 {
+    margin: 0 0 20px;
+    color: var(--implant-heading);
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.25;
+}
+
+.implant-aftercare-content > p {
+    margin: 0 0 24px;
+    color: var(--implant-text);
+    font-size: 14px;
+}
+
+.implant-aftercare-content ul {
+    display: grid;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.implant-aftercare-content li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--implant-heading);
+    font-size: 13px;
+}
+
+.implant-aftercare-content li i {
+    margin-top: 5px;
+    color: var(--implant-primary);
+}
+
+.implant-aftercare-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: var(--implant-shadow);
+}
+
+/* CTA */
+
+.implant-cta {
+    padding: 90px 7%;
+    background: linear-gradient(135deg, #e4f4f7, #f6fbfc);
+    text-align: center;
+}
+
+.implant-cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.implant-cta h2 {
+    margin: 0 0 18px;
+    color: var(--implant-heading);
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.25;
+}
+
+.implant-cta p {
+    margin: 0 0 28px;
+    color: var(--implant-text);
+    font-size: 14px;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .implant-hero {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 30px;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .implant-hero-image > img {
+        height: 380px;
+    }
+
+    .implant-about,
+    .implant-aftercare {
+        gap: 35px;
+    }
+
+    .implant-options-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .implant-benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 65px 6%;
+    }
+
+    .implant-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .implant-hero {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        min-height: auto;
+        padding: 125px 6% 70px;
+    }
+
+    .implant-hero h1 {
+        font-size: clamp(36px, 9vw, 48px);
+        letter-spacing: -0.8px;
+    }
+
+    .implant-hero-content > p {
+        font-size: 14px;
+    }
+
+    .implant-hero-image > img {
+        height: 340px;
+    }
+
+    .implant-floating-card {
+        right: 10px;
+        bottom: 15px;
+        padding: 12px;
+    }
+
+    .implant-about,
+    .implant-aftercare {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .implant-about-image img,
+    .implant-aftercare-image img {
+        height: 330px;
+    }
+
+    .implant-options-grid,
+    .implant-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .implant-option-card {
+        padding: 27px 23px;
+    }
+
+    .implant-cta {
+        padding: 65px 6%;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+    .implant-hero {
+        padding-top: 115px;
+    }
+
+    .implant-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .implant-hero-buttons a {
+        width: 100%;
+    }
+
+    .implant-trust {
+        gap: 13px;
+    }
+
+    .implant-trust div {
+        font-size: 11px;
+    }
+
+    .implant-hero-image > img {
+        height: 275px;
+        border-radius: 15px;
+    }
+
+    .implant-floating-card {
+        right: 8px;
+        bottom: 10px;
+        gap: 9px;
+    }
+
+    .implant-floating-card > i {
+        width: 35px;
+        height: 35px;
+    }
+
+    .implant-floating-card strong {
+        font-size: 11px;
+    }
+
+    .implant-floating-card span {
+        font-size: 10px;
+    }
+
+    .implant-about-image img,
+    .implant-aftercare-image img {
+        height: 270px;
+    }
+
+    .implant-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .implant-primary-btn,
+    .implant-secondary-btn {
+        padding: 13px 17px;
+        font-size: 13px;
+    }
+}
