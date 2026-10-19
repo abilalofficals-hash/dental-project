@@ -911,3 +911,353 @@ body {
         font-size: 27px;
     }
 }
+
+
+
+/* =====================================
+   DENTAL CLEANING - PROFESSIONAL FIX
+   Paste at the END of dental-cleaning.css
+===================================== */
+
+/* Prevent horizontal overflow */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.cleaning-container,
+.cleaning-hero-grid,
+.cleaning-intro-grid,
+.cleaning-benefits-grid,
+.cleaning-services-grid,
+.cleaning-process-grid {
+    min-width: 0;
+}
+
+.cleaning-hero-content,
+.cleaning-intro-content,
+.cleaning-benefits-content {
+    min-width: 0;
+}
+
+/* Remove decorative circles */
+.cleaning-decoration,
+.cleaning-decoration-one,
+.cleaning-decoration-two {
+    display: none !important;
+}
+
+/* Hero image */
+.cleaning-hero-visual {
+    min-width: 0;
+    padding: 0 0 18px;
+}
+
+.cleaning-hero-image {
+    height: 455px;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(22, 48, 71, 0.10);
+}
+
+.cleaning-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Floating information card */
+.cleaning-floating-card {
+    left: -18px;
+    bottom: 35px;
+    max-width: calc(100% - 5px);
+    gap: 12px;
+    border: 1px solid #e1ebef;
+    border-radius: 12px;
+}
+
+.cleaning-floating-icon,
+.cleaning-trust-icon,
+.cleaning-service-icon,
+.cleaning-process-icon,
+.cleaning-homecare-icon {
+    border-radius: 10px;
+}
+
+/* Intro and benefits images */
+.cleaning-intro-visual,
+.cleaning-benefits-visual {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.cleaning-intro-visual {
+    height: 420px;
+}
+
+.cleaning-benefits-visual {
+    height: 435px;
+}
+
+.cleaning-intro-visual > img,
+.cleaning-benefits-visual > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+
+/* Image caption */
+.cleaning-image-caption {
+    border: 1px solid rgba(225, 235, 239, 0.9);
+    box-shadow: 0 8px 25px rgba(22, 48, 71, 0.08);
+}
+
+/* Service cards */
+.cleaning-service-card {
+    height: 100%;
+    padding: 26px 22px;
+    border: 1px solid #e1ebef;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(22, 48, 71, 0.035);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.cleaning-service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(8, 127, 140, 0.35);
+    box-shadow: 0 14px 30px rgba(22, 48, 71, 0.09);
+}
+
+.cleaning-service-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    font-size: 21px;
+}
+
+.cleaning-service-card h3 {
+    line-height: 1.5;
+}
+
+.cleaning-service-card p {
+    line-height: 1.85;
+}
+
+/* Benefit icons: remove circular appearance */
+.cleaning-benefit-item > span {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border-radius: 9px;
+    background: #e5f5f6;
+}
+
+/* Process cards */
+.cleaning-process-card {
+    height: 100%;
+    border-radius: 12px;
+    border: 1px solid #e1ebef;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cleaning-process-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(22, 48, 71, 0.08);
+}
+
+.cleaning-process-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/* Home-care section */
+.cleaning-homecare {
+    padding: 38px 0;
+}
+
+.cleaning-homecare-icon {
+    border-radius: 12px;
+}
+
+/* CTA section */
+.cleaning-cta-box {
+    border-radius: 16px;
+}
+
+.cleaning-cta-decoration {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .cleaning-hero-grid {
+        gap: 35px;
+    }
+
+    .cleaning-hero-image {
+        height: 390px;
+    }
+
+    .cleaning-intro-grid,
+    .cleaning-benefits-grid {
+        gap: 35px;
+    }
+
+    .cleaning-floating-card {
+        left: -8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .cleaning-section-padding {
+        padding: 60px 0;
+    }
+
+    .cleaning-hero {
+        padding: 125px 0 60px;
+    }
+
+    .cleaning-hero-grid,
+    .cleaning-intro-grid,
+    .cleaning-benefits-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .cleaning-hero-visual {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 0 12px;
+    }
+
+    .cleaning-hero-image {
+        height: 360px;
+        border-radius: 20px;
+    }
+
+    .cleaning-floating-card {
+        left: 10px;
+        bottom: 22px;
+        padding: 12px 14px;
+    }
+
+    .cleaning-intro-visual,
+    .cleaning-benefits-visual {
+        height: 340px;
+    }
+
+    .cleaning-services-grid,
+    .cleaning-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .cleaning-service-card,
+    .cleaning-process-card {
+        padding: 22px 17px;
+    }
+
+    .cleaning-benefits-note {
+        right: 10px;
+        bottom: 15px;
+    }
+
+    .cleaning-cta-box {
+        padding: 38px 28px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .cleaning-container {
+        width: calc(100% - 30px);
+    }
+
+    .cleaning-hero {
+        padding-top: 115px;
+    }
+
+    .cleaning-hero h1 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .cleaning-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cleaning-btn {
+        width: 100%;
+    }
+
+    .cleaning-hero-image {
+        height: 300px;
+        border-radius: 17px;
+    }
+
+    .cleaning-floating-card {
+        left: 7px;
+        bottom: 18px;
+        gap: 9px;
+        padding: 10px 12px;
+    }
+
+    .cleaning-floating-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .cleaning-intro-visual,
+    .cleaning-benefits-visual {
+        height: 275px;
+    }
+
+    .cleaning-services-grid,
+    .cleaning-process-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .cleaning-service-card,
+    .cleaning-process-card {
+        padding: 23px;
+    }
+
+    .cleaning-benefit-item {
+        gap: 11px;
+    }
+
+    .cleaning-benefits-note {
+        right: 8px;
+        left: 8px;
+        max-width: none;
+        padding: 12px;
+    }
+
+    .cleaning-homecare-inner {
+        align-items: flex-start;
+    }
+
+    .cleaning-cta-box {
+        padding: 30px 21px;
+    }
+
+    .cleaning-cta-decoration {
+        right: -35px;
+        font-size: 125px;
+    }
+}

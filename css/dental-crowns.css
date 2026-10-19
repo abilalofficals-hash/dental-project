@@ -911,3 +911,288 @@ body {
         font-size: 27px;
     }
 }
+
+
+
+/* =========================================
+   DENTAL CROWNS - FINAL DESIGN FIXES
+========================================= */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.crowns-container,
+.crowns-hero-grid,
+.crowns-intro-grid,
+.crowns-benefits-grid,
+.crowns-options-grid,
+.crowns-process-grid {
+    min-width: 0;
+}
+
+/* REMOVE DECORATIVE CIRCLES */
+.crowns-decoration,
+.crowns-decoration-one,
+.crowns-decoration-two {
+    display: none !important;
+}
+
+/* HERO IMAGE */
+.crowns-hero-visual {
+    width: 100%;
+    min-width: 0;
+}
+
+.crowns-hero-image {
+    width: 100%;
+    height: 455px;
+    overflow: hidden;
+    border-radius: 24px !important;
+}
+
+.crowns-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* INTRO AND BENEFITS IMAGES */
+.crowns-intro-visual,
+.crowns-benefits-visual {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.crowns-intro-visual {
+    height: 420px;
+}
+
+.crowns-benefits-visual {
+    height: 435px;
+}
+
+.crowns-intro-visual > img,
+.crowns-benefits-visual > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+
+/* CROWN OPTION CARDS */
+.crowns-option-card {
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e1ebef;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.crowns-option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(22, 48, 71, 0.10);
+}
+
+/* ICON BACKGROUNDS: SQUARE, NOT CIRCULAR */
+.crowns-option-icon,
+.crowns-process-icon,
+.crowns-trust-icon,
+.crowns-floating-icon,
+.crowns-aftercare-icon {
+    border-radius: 10px !important;
+}
+
+/* BENEFIT CHECK ICONS: REMOVE CIRCULAR BACKGROUND */
+.crowns-benefit-item > span {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px !important;
+    background: #e5f5f6;
+    color: #087f8c;
+}
+
+/* PROCESS CARDS */
+.crowns-process-card {
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #e1ebef;
+}
+
+/* OPTIONAL IMAGES INSIDE CROWN OPTION CARDS */
+.crowns-option-image {
+    display: block;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+/* FLOATING INFORMATION CARDS */
+.crowns-floating-card,
+.crowns-benefits-note {
+    max-width: calc(100% - 12px);
+    border-radius: 12px;
+}
+
+.crowns-floating-card > div,
+.crowns-benefits-note > div {
+    min-width: 0;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .crowns-hero-grid {
+        gap: 32px;
+    }
+
+    .crowns-intro-grid,
+    .crowns-benefits-grid {
+        gap: 35px;
+    }
+
+    .crowns-options-grid,
+    .crowns-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .crowns-hero-image {
+        height: 390px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .crowns-container {
+        width: calc(100% - 36px);
+    }
+
+    .crowns-hero {
+        padding: 125px 0 60px;
+    }
+
+    .crowns-hero-grid,
+    .crowns-intro-grid,
+    .crowns-benefits-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .crowns-hero-image {
+        height: 350px;
+        border-radius: 18px !important;
+    }
+
+    .crowns-intro-visual,
+    .crowns-benefits-visual {
+        height: 320px;
+    }
+
+    .crowns-options-grid,
+    .crowns-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .crowns-option-card,
+    .crowns-process-card {
+        padding: 20px 16px;
+    }
+
+    .crowns-option-card h3 {
+        font-size: 14px;
+    }
+
+    .crowns-option-card p,
+    .crowns-process-card p {
+        font-size: 11px;
+        overflow-wrap: break-word;
+    }
+
+    .crowns-floating-card {
+        left: 0;
+        bottom: 25px;
+        padding: 11px;
+    }
+
+    .crowns-benefits-note {
+        right: 8px;
+        bottom: 12px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .crowns-container {
+        width: calc(100% - 30px);
+    }
+
+    .crowns-hero {
+        padding-top: 115px;
+    }
+
+    .crowns-hero-image {
+        height: 290px;
+    }
+
+    .crowns-intro-visual,
+    .crowns-benefits-visual {
+        height: 265px;
+    }
+
+    .crowns-options-grid,
+    .crowns-process-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .crowns-option-card,
+    .crowns-process-card {
+        padding: 23px;
+    }
+
+    .crowns-option-card h3 {
+        font-size: 15px;
+    }
+
+    .crowns-option-card p,
+    .crowns-process-card p {
+        font-size: 12px;
+    }
+
+    .crowns-option-image {
+        height: 190px;
+    }
+
+    .crowns-floating-card {
+        max-width: calc(100% - 4px);
+    }
+
+    .crowns-aftercare-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .crowns-cta-box {
+        padding: 30px 20px;
+    }
+}

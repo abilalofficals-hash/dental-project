@@ -603,3 +603,31 @@
         transform: rotate(180deg);
     }
 }
+
+
+/* PROFESSIONAL SERVICES HOVER DROPDOWN */
+
+@media (min-width: 769px) {
+    .nav-dropdown {
+        position: relative;
+        padding-bottom: 0;
+    }
+
+    .dropdown-menu {
+        top: 100%;
+        left: -15px;
+        margin-top: 0;
+        padding-top: 12px;
+        min-width: 235px;
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu,
+    .dropdown-menu.open {
+        display: block;
+    }
+
+    .nav-dropdown:hover .dropdown-toggle {
+        transform: rotate(180deg);
+    }
+}

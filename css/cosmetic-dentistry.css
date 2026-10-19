@@ -964,3 +964,366 @@ body {
         font-size: 28px;
     }
 }
+
+
+/* =========================================
+   COSMETIC DENTISTRY - RESPONSIVE FIXES
+========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cosmetic-container {
+    width: min(1160px, 90%);
+    margin: 0 auto;
+}
+
+.cosmetic-hero-grid,
+.cosmetic-intro-grid,
+.cosmetic-benefits-grid,
+.cosmetic-treatment-grid,
+.cosmetic-process-grid {
+    min-width: 0;
+}
+
+.cosmetic-hero-content,
+.cosmetic-intro-content,
+.cosmetic-benefits-content {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+/* HERO IMAGE */
+.cosmetic-hero-visual {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+}
+
+.cosmetic-hero-image {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 180px 180px 22px 22px;
+}
+
+.cosmetic-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* INTRO IMAGE */
+.cosmetic-intro-visual {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.cosmetic-intro-visual > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+}
+
+/* BENEFITS IMAGE */
+.cosmetic-benefits-visual {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.cosmetic-benefits-visual > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+}
+
+/* TREATMENT CARDS */
+.cosmetic-treatment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    height: 100%;
+    padding: 26px 22px;
+    background: #ffffff;
+    border: 1px solid #e1ebef;
+    border-radius: 14px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.cosmetic-treatment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(22, 48, 71, 0.10);
+}
+
+.cosmetic-treatment-card h3 {
+    color: #163047;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+.cosmetic-treatment-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+.cosmetic-treatment-card a {
+    margin-top: auto;
+    color: #087f8c;
+    text-decoration: none;
+}
+
+/* OPTIONAL IMAGE INSIDE TREATMENT CARDS */
+.cosmetic-treatment-image {
+    display: block;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* PROCESS CARDS */
+.cosmetic-process-card {
+    min-width: 0;
+    height: 100%;
+    padding: 25px 20px;
+    background: #ffffff;
+    border: 1px solid #e1ebef;
+    border-radius: 14px;
+}
+
+/* FLOATING CARDS */
+.cosmetic-floating-card {
+    max-width: calc(100% - 10px);
+}
+
+.cosmetic-floating-card > div {
+    min-width: 0;
+}
+
+.cosmetic-benefits-note {
+    max-width: calc(100% - 20px);
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .cosmetic-hero-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 0.95fr);
+        gap: 30px;
+    }
+
+    .cosmetic-intro-grid,
+    .cosmetic-benefits-grid {
+        gap: 35px;
+    }
+
+    .cosmetic-treatment-grid,
+    .cosmetic-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cosmetic-hero-image {
+        height: 400px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .cosmetic-container {
+        width: calc(100% - 36px);
+    }
+
+    .cosmetic-hero {
+        padding: 125px 0 60px;
+    }
+
+    .cosmetic-hero-grid,
+    .cosmetic-intro-grid,
+    .cosmetic-benefits-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .cosmetic-hero-visual {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 0 8px 18px 0;
+    }
+
+    .cosmetic-hero-image {
+        height: 360px;
+        border-radius: 140px 140px 18px 18px;
+    }
+
+    .cosmetic-intro-visual,
+    .cosmetic-benefits-visual {
+        height: 330px;
+    }
+
+    .cosmetic-treatment-grid,
+    .cosmetic-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .cosmetic-treatment-card {
+        padding: 20px 16px;
+    }
+
+    .cosmetic-treatment-card h3 {
+        font-size: 14px;
+    }
+
+    .cosmetic-treatment-card p,
+    .cosmetic-process-card p {
+        font-size: 12px;
+    }
+
+    .cosmetic-treatment-image {
+        height: 145px;
+    }
+
+    .cosmetic-floating-card {
+        left: 0;
+        bottom: 25px;
+        padding: 12px;
+    }
+
+    .cosmetic-benefits-note {
+        right: 8px;
+        bottom: 12px;
+    }
+
+    .cosmetic-cta-box {
+        padding: 35px 25px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .cosmetic-container {
+        width: calc(100% - 30px);
+    }
+
+    .cosmetic-hero {
+        padding-top: 115px;
+    }
+
+    .cosmetic-hero h1 {
+        font-size: 33px;
+    }
+
+    .cosmetic-hero-image {
+        height: 300px;
+        border-radius: 110px 110px 16px 16px;
+    }
+
+    .cosmetic-intro-visual,
+    .cosmetic-benefits-visual {
+        height: 270px;
+    }
+
+    .cosmetic-treatment-grid,
+    .cosmetic-process-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cosmetic-treatment-card {
+        padding: 24px;
+    }
+
+    .cosmetic-treatment-card h3 {
+        font-size: 16px;
+    }
+
+    .cosmetic-treatment-card p,
+    .cosmetic-process-card p {
+        font-size: 13px;
+    }
+
+    .cosmetic-treatment-image {
+        height: 190px;
+    }
+
+    .cosmetic-floating-card {
+        left: 0;
+        max-width: calc(100% - 4px);
+        padding: 10px;
+    }
+
+    .cosmetic-aftercare-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cosmetic-cta-box {
+        padding: 30px 20px;
+    }
+}
+
+
+
+/* REMOVE UNWANTED CIRCLE SHAPES FROM CARDS */
+
+.cosmetic-treatment-card,
+.cosmetic-process-card {
+    border-radius: 12px !important;
+}
+
+.cosmetic-treatment-card .cosmetic-card-icon,
+.cosmetic-process-card .cosmetic-process-icon {
+    border-radius: 10px !important;
+}
+
+/* Remove decorative circles if they are showing inside cards */
+.cosmetic-decoration,
+.cosmetic-decoration-one,
+.cosmetic-decoration-two {
+    display: none !important;
+}
+
+/* Keep card content clean */
+.cosmetic-treatment-card,
+.cosmetic-process-card {
+    overflow: hidden;
+}
+
+.cosmetic-treatment-card img,
+.cosmetic-process-card img {
+    border-radius: 8px;
+}
