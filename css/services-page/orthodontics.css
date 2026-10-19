@@ -90,7 +90,8 @@ a {
 .ortho-hero-visual,
 .ortho-section-content,
 .ortho-benefits-content {
-    min-width: 0;
+    min-width: 10;
+    padding-top: 17px;
 }
 
 .ortho-eyebrow,
@@ -751,9 +752,20 @@ a {
         width: calc(100% - 32px);
     }
 
+    .ortho-hero-content,
+.ortho-hero-visual,
+.ortho-section-content,
+.ortho-benefits-content {
+    min-width: 10;
+    padding-top: 35px;
+}
+
+
     .ortho-section {
         padding: 55px 0;
     }
+
+ 
 
     .ortho-hero {
         padding: 40px 0 48px;
@@ -1002,6 +1014,16 @@ a {
     .ortho-container {
         width: calc(100% - 24px);
     }
+
+ 
+    .ortho-hero-content,
+.ortho-hero-visual,
+.ortho-section-content,
+.ortho-benefits-content {
+    min-width: 10;
+    padding-top: 35px;
+}
+
 
     .ortho-hero h1 {
         font-size: 30px;

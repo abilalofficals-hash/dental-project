@@ -1525,8 +1525,15 @@ img {
 
 @media (max-width: 380px) {
 
+    
+
     .hero-content h1 {
         font-size: 35px;
+       
+    }
+
+    .hero-content h1{
+        padding-top: 110px;
     }
 
     .hero-trust {
